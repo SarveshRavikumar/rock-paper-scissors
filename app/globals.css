@@ -300,6 +300,7 @@ body::before {
 .move-btn .e {
   font-size: 2.6rem;
   display: block;
+  pointer-events: none;
 }
 
 .move-btn .l {
@@ -307,6 +308,7 @@ body::before {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   color: #cfe2f2;
+  pointer-events: none;
 }
 
 .controls {
