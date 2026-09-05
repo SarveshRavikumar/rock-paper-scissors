@@ -9,6 +9,7 @@ import {
   type PlayerSlot,
 } from "@/lib/themes";
 import ThemePicker from "./ThemePicker";
+import Bubbles from "./Bubbles";
 
 interface PublicPlayer {
   connected: boolean;
@@ -178,6 +179,7 @@ export default function OnlineGame({ onExit }: { onExit: () => void }) {
   if (phase === "lobby") {
     return (
       <main className="shell" style={themeVars}>
+        <Bubbles emojis={theme.bubbles} />
         <div className="topbar">
           <button className="ghost-btn" onClick={onExit}>
             ← Menu
@@ -224,8 +226,6 @@ export default function OnlineGame({ onExit }: { onExit: () => void }) {
         </div>
 
         {error && <p className="error">{error}</p>}
-
-        <p className="footer">Built with Next.js · Deploy-ready for Vercel</p>
       </main>
     );
   }
@@ -266,6 +266,7 @@ export default function OnlineGame({ onExit }: { onExit: () => void }) {
 
   return (
     <main className="shell" style={themeVars}>
+      <Bubbles emojis={theme.bubbles} />
       <div className="topbar">
         <button className="ghost-btn" onClick={leave}>
           ← Leave
@@ -360,8 +361,6 @@ export default function OnlineGame({ onExit }: { onExit: () => void }) {
         </p>
       )}
       {error && <p className="error">{error}</p>}
-
-      <p className="footer">Built with Next.js · Deploy-ready for Vercel</p>
     </main>
   );
 }

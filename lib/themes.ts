@@ -13,6 +13,7 @@ export interface Theme {
   accent: string; // primary neon color
   accent2: string; // secondary neon color
   bg: string; // background gradient
+  bubbles: string[]; // emoji that float up in the background
   moves: Record<Move, ThemeMove>;
 }
 
@@ -21,9 +22,10 @@ export const THEMES: Theme[] = [
     id: "military",
     name: "Military",
     tagline: "Combat protocol engaged",
-    accent: "#00ff88",
-    accent2: "#7cff00",
-    bg: "radial-gradient(circle at 30% 20%, #142e1a 0%, #0a1410 60%, #050805 100%)",
+    accent: "#3dff9e",
+    accent2: "#c6ff3c",
+    bg: "radial-gradient(120% 120% at 20% 0%, #12291c 0%, #0b1a12 45%, #060d09 100%)",
+    bubbles: ["🎖️", "🪖", "△", "◆"],
     moves: {
       rock: { emoji: "💣", label: "Grenade" },
       paper: { emoji: "📋", label: "Orders" },
@@ -34,9 +36,10 @@ export const THEMES: Theme[] = [
     id: "halloween",
     name: "Halloween",
     tagline: "Trick, treat, or terminate",
-    accent: "#ff7a00",
-    accent2: "#a020f0",
-    bg: "radial-gradient(circle at 70% 20%, #2a1633 0%, #150a1c 60%, #08040c 100%)",
+    accent: "#ff8a1e",
+    accent2: "#a45cff",
+    bg: "radial-gradient(120% 120% at 80% 0%, #2a1533 0%, #180c22 45%, #0b0612 100%)",
+    bubbles: ["🎃", "🕸️", "🕷️", "◆"],
     moves: {
       rock: { emoji: "🎃", label: "Pumpkin" },
       paper: { emoji: "👻", label: "Ghost" },
@@ -47,9 +50,10 @@ export const THEMES: Theme[] = [
     id: "asian",
     name: "Asian",
     tagline: "Balance of the dragon",
-    accent: "#ff2d55",
-    accent2: "#ffd60a",
-    bg: "radial-gradient(circle at 50% 15%, #33131b 0%, #1c0a10 60%, #0c0406 100%)",
+    accent: "#ff4d6d",
+    accent2: "#ffcf33",
+    bg: "radial-gradient(120% 120% at 50% 0%, #331018 0%, #1f0a10 45%, #0f0508 100%)",
+    bubbles: ["🐉", "🏮", "花", "◆"],
     moves: {
       rock: { emoji: "🏮", label: "Lantern" },
       paper: { emoji: "🎏", label: "Koi Flag" },
@@ -60,9 +64,10 @@ export const THEMES: Theme[] = [
     id: "tribal",
     name: "Tribal",
     tagline: "Ancestral spirits awaken",
-    accent: "#ffb703",
-    accent2: "#fb5607",
-    bg: "radial-gradient(circle at 40% 25%, #2e1c0a 0%, #1a1006 60%, #0b0703 100%)",
+    accent: "#ffb02e",
+    accent2: "#ff5a1f",
+    bg: "radial-gradient(120% 120% at 30% 0%, #2e1a0c 0%, #1b0f06 45%, #0d0703 100%)",
+    bubbles: ["🔥", "🪶", "△", "◆"],
     moves: {
       rock: { emoji: "🗿", label: "Idol" },
       paper: { emoji: "🪶", label: "Feather" },
@@ -73,9 +78,10 @@ export const THEMES: Theme[] = [
     id: "jungle",
     name: "Jungle",
     tagline: "Survival of the wildest",
-    accent: "#39ff14",
-    accent2: "#00e0ff",
-    bg: "radial-gradient(circle at 60% 20%, #0c2e1a 0%, #071a10 60%, #030d07 100%)",
+    accent: "#4dff5a",
+    accent2: "#00e5ff",
+    bg: "radial-gradient(120% 120% at 65% 0%, #0d2a1e 0%, #081a13 45%, #040d09 100%)",
+    bubbles: ["🌴", "🐍", "🌿", "◆"],
     moves: {
       rock: { emoji: "🥥", label: "Coconut" },
       paper: { emoji: "🍃", label: "Leaf" },
@@ -87,8 +93,9 @@ export const THEMES: Theme[] = [
     name: "Party",
     tagline: "Let the confetti fly",
     accent: "#ff4ecd",
-    accent2: "#ffe600",
-    bg: "radial-gradient(circle at 50% 20%, #331433 0%, #1c0a1c 60%, #0c040c 100%)",
+    accent2: "#26e0ff",
+    bg: "radial-gradient(120% 120% at 50% 0%, #2a1230 0%, #170a1e 45%, #0b0511 100%)",
+    bubbles: ["🎉", "🎊", "◆", "△"],
     moves: {
       rock: { emoji: "🎈", label: "Balloon" },
       paper: { emoji: "🎉", label: "Confetti" },
@@ -99,9 +106,10 @@ export const THEMES: Theme[] = [
     id: "disco",
     name: "Disco",
     tagline: "Dance floor domination",
-    accent: "#b026ff",
-    accent2: "#00f0ff",
-    bg: "radial-gradient(circle at 45% 20%, #1e1140 0%, #100a24 60%, #06040f 100%)",
+    accent: "#b34dff",
+    accent2: "#2ef0ff",
+    bg: "radial-gradient(120% 120% at 40% 0%, #1c1140 0%, #100a26 45%, #070412 100%)",
+    bubbles: ["🪩", "🎵", "◆", "△"],
     moves: {
       rock: { emoji: "🪩", label: "Disco Ball" },
       paper: { emoji: "🎶", label: "Groove" },

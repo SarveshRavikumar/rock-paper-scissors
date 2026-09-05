@@ -10,6 +10,7 @@ import {
   type Result,
 } from "@/lib/themes";
 import ThemePicker from "./ThemePicker";
+import Bubbles from "./Bubbles";
 
 export default function PvCGame({ onExit }: { onExit: () => void }) {
   const [themeId, setThemeId] = useState<string>(THEMES[0].id);
@@ -71,6 +72,7 @@ export default function PvCGame({ onExit }: { onExit: () => void }) {
 
   return (
     <main className="shell" style={themeVars}>
+      <Bubbles emojis={theme.bubbles} />
       <div className="topbar">
         <button className="ghost-btn" onClick={onExit}>
           ← Menu
@@ -151,8 +153,6 @@ export default function PvCGame({ onExit }: { onExit: () => void }) {
           Reset match
         </button>
       </div>
-
-      <p className="footer">Built with Next.js · Deploy-ready for Vercel</p>
     </main>
   );
 }
