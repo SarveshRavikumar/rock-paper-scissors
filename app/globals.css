@@ -340,3 +340,215 @@ body::before {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
 }
+
+/* ---- top bar ---- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mode-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* ---- mode selection menu ---- */
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 720px;
+  margin: 40px auto 0;
+}
+
+.mode-card {
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 34px 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: #eaf6ff;
+  backdrop-filter: blur(8px);
+  transition: transform 0.18s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 0 34px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.mode-emoji {
+  font-size: 3rem;
+}
+.mode-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.mode-desc {
+  font-size: 0.85rem;
+  color: #9fb4c8;
+  line-height: 1.4;
+}
+
+/* ---- GO button ---- */
+.go-btn {
+  cursor: pointer;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #04040c;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 26px color-mix(in srgb, var(--accent) 55%, transparent);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.go-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+.go-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* selected move highlight */
+.move-btn.picked {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 50%, transparent);
+  transform: translateY(-4px);
+}
+
+/* ---- online lobby ---- */
+.lobby {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 26px auto 0;
+  max-width: 760px;
+}
+
+.lobby-card {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 26px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+}
+.lobby-card h3 {
+  letter-spacing: 0.06em;
+}
+.lobby-divider {
+  align-self: center;
+  color: #6b7f94;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.muted {
+  color: #9fb4c8;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.code-input {
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.4em;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-transform: uppercase;
+}
+.code-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* ---- online room info ---- */
+.roominfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 6px 0 4px;
+}
+.room-code {
+  letter-spacing: 0.1em;
+  color: #cfe2f2;
+}
+.room-code strong {
+  color: var(--accent);
+  letter-spacing: 0.3em;
+  font-size: 1.1rem;
+}
+.round-no {
+  color: #8ea3b8;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.conn {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+.conn.on {
+  color: #29ffa0;
+  border: 1px solid rgba(41, 255, 160, 0.4);
+}
+.conn.off {
+  color: #ffd60a;
+  border: 1px solid rgba(255, 214, 10, 0.4);
+}
+
+.hint {
+  text-align: center;
+  color: #9fb4c8;
+  font-size: 0.85rem;
+  margin-top: 18px;
+}
+.hint strong {
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+.error {
+  text-align: center;
+  color: #ff4d6d;
+  font-size: 0.85rem;
+  margin-top: 16px;
+}

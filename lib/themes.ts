@@ -1,4 +1,5 @@
 export type Move = "rock" | "paper" | "scissors";
+export type PlayerSlot = "p1" | "p2";
 
 export interface ThemeMove {
   emoji: string;
